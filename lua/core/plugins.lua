@@ -62,7 +62,7 @@ require("lazy").setup({
 			require("ibl").setup()
 		end,
 	},
-	{
+  {
 		"VonHeikemen/lsp-zero.nvim",
 		cond = enabled(group, "lsp_zero"),
 		event = "VimEnter",
@@ -220,6 +220,17 @@ require("lazy").setup({
 			require("project_nvim").setup()
 		end,
 	},
+  -- {
+  --   "Eutrius/Otree.nvim",
+  --   lazy = false,
+  --   dependencies = {
+  --       "nvim-tree/nvim-web-devicons",
+  --       "stevearc/oil.nvim",
+  --   },
+  --   config = function()
+  --       require("Otree").setup()
+  --   end
+  -- },
 	{
 		"tiagovla/scope.nvim",
 		cond = enabled(group, "scope"),

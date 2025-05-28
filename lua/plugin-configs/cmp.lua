@@ -3,7 +3,10 @@ local cmp_action = require("lsp-zero").cmp_action()
 local luasnip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-
+local custom_snippets = require("custom.s")
+		for ft, snippets in pairs(custom_snippets) do
+			luasnip.add_snippets(ft, snippets)
+		end
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 local has_words_before = require("core.utils.utils").has_words_before
 cmp.setup({
