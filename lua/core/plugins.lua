@@ -101,16 +101,16 @@ require("lazy").setup({
 			require("plugin-configs.neoscroll")
 		end,
 	},
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		cond = enabled(group, "neotree"),
-		event = "VeryLazy",
-		config = function()
-			require("plugin-configs.neo-tree")
-		end,
-		branch = "v3.x",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+	-- {
+	-- 	"nvim-neo-tree/neo-tree.nvim",
+	-- 	cond = enabled(group, "neotree"),
+	-- 	event = "VeryLazy",
+	-- 	config = function()
+	-- 		require("plugin-configs.neo-tree")colorsch
+	-- 	end,
+	-- 	branch = "v3.x",
+	-- 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	-- },
 	{
 		"Shatur/neovim-session-manager",
 		cond = enabled(group, "session_manager"),
@@ -220,17 +220,17 @@ require("lazy").setup({
 			require("project_nvim").setup()
 		end,
 	},
-  -- {
-  --   "Eutrius/Otree.nvim",
-  --   lazy = false,
-  --   dependencies = {
-  --       "nvim-tree/nvim-web-devicons",
-  --       "stevearc/oil.nvim",
-  --   },
-  --   config = function()
-  --       require("Otree").setup()
-  --   end
-  -- },
+  {
+    "Eutrius/Otree.nvim",
+    lazy = false,
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+        "stevearc/oil.nvim",
+    },
+    config = function()
+        require("Otree").setup()
+    end
+  },
 	{
 		"tiagovla/scope.nvim",
 		cond = enabled(group, "scope"),
@@ -305,6 +305,12 @@ require("lazy").setup({
 			require("wlsample.evil_line")
 		end,
 	},
+    {
+   "m4xshen/hardtime.nvim",
+   lazy = false,
+   dependencies = { "MunifTanjim/nui.nvim" },
+   opts = {},
+  },
   {
   'sainnhe/sonokai',
       lazy = false,

@@ -16,11 +16,11 @@ if enabled(group, "zen") then
 	map("n", "<leader>zm", "<CMD>ZenMode<CR>")
 end
 
--- NeoTree
-if enabled(group, "neotree") then
-	map("n", "<leader>e", "<CMD>Neotree reveal left toggle<CR>")
-	map("n", "<leader>nf", "<CMD>Neotree reveal float toggle<CR>")
-end
+-- -- NeoTree
+-- if enabled(group, "neotree") then
+	map("n", "<leader>e", "<CMD>OtreeFocus<CR>")
+-- 	map("n", "<leader>nf", "<CMD>Neotree reveal float toggle<CR>")
+-- end
 
 -- Searching and Highlighting
 map("n", "m", "<CMD>noh<CR>")
@@ -44,7 +44,7 @@ map("c", "<C-n>", "<Down>")
 
 -- Telescope
 if enabled(group, "telescope") then
-	map("n", "<leader>tf", "<CMD>Telescope git_files hidden=true<CR>", { desc = "Telescope Find Files" })
+	map("n", "<leader>tf", "<CMD>Telescope find_files<CR>", { desc = "Telescope Find Files" })
 	map("n", "<leader>tg", "<CMD>Telescope live_grep<CR>")
 	map("n", "<leader>tb", "<CMD>Telescope buffers<CR>")
 	map("n", "<leader>th", "<CMD>Telescope help_tags<CR>")
