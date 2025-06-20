@@ -305,12 +305,12 @@ require("lazy").setup({
 			require("wlsample.evil_line")
 		end,
 	},
-    {
-   "m4xshen/hardtime.nvim",
-   lazy = false,
-   dependencies = { "MunifTanjim/nui.nvim" },
-   opts = {},
-  },
+  --   {
+  --  "m4xshen/hardtime.nvim",
+  --  lazy = false,
+  --  dependencies = { "MunifTanjim/nui.nvim" },
+  --  opts = {},
+  -- },
   {
   'sainnhe/sonokai',
       lazy = false,
